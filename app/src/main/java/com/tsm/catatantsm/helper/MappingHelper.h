@@ -1,0 +1,8 @@
+//
+// Created by Asus on 28/12/2022.
+//
+
+#ifndef CATATANTSM_MAPPINGHELPER_H
+#define CATATANTSM_MAPPINGHELPER_H
+
+#endif //CATATANTSM_MAPPINGHELPER_H
