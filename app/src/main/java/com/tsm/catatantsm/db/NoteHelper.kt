@@ -8,9 +8,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns._ID
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
-/**
- * Created by sidiqpermana on 11/23/16.
- */
 
 class NoteHelper(context: Context) {
 
@@ -42,7 +39,6 @@ class NoteHelper(context: Context) {
     /**
      * Ambil data dari semua note yang ada di dalam database
      *
-     * @return cursor hasil queryAll
      */
     fun queryAll(): Cursor {
         return database.query(
@@ -59,8 +55,6 @@ class NoteHelper(context: Context) {
     /**
      * Ambil data dari note berdasarakan parameter id
      *
-     * @param id id note yang dicari
-     * @return cursor hasil queryAll
      */
     fun queryById(id: String): Cursor {
         return database.query(
@@ -98,9 +92,6 @@ class NoteHelper(context: Context) {
 
     /**
      * Delete data dalam database
-     *
-     * @param id data dengan id berapa yang akan di delete
-     * @return int jumlah data yang ter-delete
      */
     fun deleteById(id: String): Int {
         return database.delete(DATABASE_TABLE, "$_ID = '$id'", null)
