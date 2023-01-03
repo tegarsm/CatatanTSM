@@ -2,9 +2,6 @@ package com.tsm.catatantsm.db
 
 import android.provider.BaseColumns
 
-/**
- * Created by dicoding on 10/12/2017.
- */
 
 internal class DatabaseContract {
 
