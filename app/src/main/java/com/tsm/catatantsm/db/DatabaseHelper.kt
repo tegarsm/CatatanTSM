@@ -6,9 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
-/**
- * Created by sidiqpermana on 11/23/16.
- */
 
 internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
