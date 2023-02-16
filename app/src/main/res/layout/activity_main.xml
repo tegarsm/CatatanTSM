@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     android:fitsSystemWindows="true"
     tools:context="com.tsm.catatantsm.MainActivity">
 
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:foregroundGravity="bottom"
+        app:backgroundTint="#009688"
         app:fabSize="normal"
         app:layout_anchor="@id/rv_notes"
         app:layout_anchorGravity="bottom|end"

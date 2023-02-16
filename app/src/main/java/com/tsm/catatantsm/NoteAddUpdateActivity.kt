@@ -100,7 +100,7 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             values.put(DatabaseContract.NoteColumns.TITLE, title)
             values.put(DatabaseContract.NoteColumns.DESCRIPTION, description)
 
-            /*
+            /**
             Jika merupakan edit maka setresultnya UPDATE, dan jika bukan maka setresultnya ADD
             */
             if (isEdit) {
@@ -162,10 +162,8 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
-    /*
+    /**
     Konfirmasi dialog sebelum proses batal atau hapus
-    close = 10
-    deleteNote = 20
      */
     private fun showAlertDialog(type: Int) {
         val isDialogClose = type == ALERT_DIALOG_CLOSE

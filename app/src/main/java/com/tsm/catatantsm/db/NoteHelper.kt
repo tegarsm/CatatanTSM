@@ -8,9 +8,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns._ID
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
-/**
- * Created by sidiqpermana on 11/23/16.
- */
+
 
 class NoteHelper(context: Context) {
 
@@ -40,9 +38,7 @@ class NoteHelper(context: Context) {
     }
 
     /**
-     * Ambil data dari semua note yang ada di dalam database
-     *
-     * @return cursor hasil queryAll
+     * Menampilkan data dari semua note yang ada di dalam database
      */
     fun queryAll(): Cursor {
         return database.query(
@@ -56,11 +52,7 @@ class NoteHelper(context: Context) {
         )
     }
 
-    /**
-     * Ambil data dari note berdasarakan parameter id
-     *
-     * @param id id note yang dicari
-     * @return cursor hasil queryAll
+    /** Mengambil data dari catatan berdasarkan id
      */
     fun queryById(id: String): Cursor {
         return database.query(
@@ -75,32 +67,19 @@ class NoteHelper(context: Context) {
         )
     }
 
-    /**
-     * Simpan data ke dalam database
-     *
-     * @param values nilai data yang akan di simpan
-     * @return long id dari data yang baru saja di masukkan
+    /** Menyimpan data ke dalam database
      */
     fun insert(values: ContentValues?): Long {
         return database.insert(DATABASE_TABLE, null, values)
     }
 
-    /**
-     * Update data dalam database
-     *
-     * @param id     data dengan id berapa yang akan di update
-     * @param values nilai data baru
-     * @return int jumlah data yang ter-update
+    /** Update/Mengedit data dalam database
      */
     fun update(id: String, values: ContentValues?): Int {
         return database.update(DATABASE_TABLE, values, "$_ID = ?", arrayOf(id))
     }
 
-    /**
-     * Delete data dalam database
-     *
-     * @param id data dengan id berapa yang akan di delete
-     * @return int jumlah data yang ter-delete
+    /** Menghapus data yang ada didalam database
      */
     fun deleteById(id: String): Int {
         return database.delete(DATABASE_TABLE, "$_ID = '$id'", null)

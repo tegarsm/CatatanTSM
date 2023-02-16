@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Tampilkan snackbar
      *
-     * @param message inputan message
+     * Pesan hasil input data
      */
     private fun showSnackbarMessage(message: String) {
         Snackbar.make(binding.rvNotes, message, Snackbar.LENGTH_SHORT).show()

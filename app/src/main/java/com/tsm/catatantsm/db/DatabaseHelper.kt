@@ -6,10 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
-/**
- * Created by sidiqpermana on 11/23/16.
- */
-
 internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
@@ -29,13 +25,11 @@ internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATA
         db.execSQL(SQL_CREATE_TABLE_NOTE)
     }
 
-    /*
-    Method onUpgrade akan di panggil ketika terjadi perbedaan versi
+    /** Method onUpgrade akan di panggil ketika terjadi perbedaan versi
     Gunakan method onUpgrade untuk melakukan proses migrasi data
      */
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        /*
-        Drop table tidak dianjurkan ketika proses migrasi terjadi dikarenakan data user akan hilang,
+        /** Drop table tidak dianjurkan ketika proses migrasi terjadi dikarenakan data user akan hilang,
         */
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)
