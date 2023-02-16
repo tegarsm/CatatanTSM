@@ -8,7 +8,10 @@ import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns._ID
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76f322f0341c19f332208a36863e0b316fb7fef9
 
 class NoteHelper(context: Context) {
 
@@ -38,7 +41,12 @@ class NoteHelper(context: Context) {
     }
 
     /**
+<<<<<<< HEAD
      * Menampilkan data dari semua note yang ada di dalam database
+=======
+     * Ambil data dari semua note yang ada di dalam database
+     *
+>>>>>>> 76f322f0341c19f332208a36863e0b316fb7fef9
      */
     fun queryAll(): Cursor {
         return database.query(
@@ -52,7 +60,13 @@ class NoteHelper(context: Context) {
         )
     }
 
+<<<<<<< HEAD
     /** Mengambil data dari catatan berdasarkan id
+=======
+    /**
+     * Ambil data dari note berdasarakan parameter id
+     *
+>>>>>>> 76f322f0341c19f332208a36863e0b316fb7fef9
      */
     fun queryById(id: String): Cursor {
         return database.query(
@@ -79,7 +93,12 @@ class NoteHelper(context: Context) {
         return database.update(DATABASE_TABLE, values, "$_ID = ?", arrayOf(id))
     }
 
+<<<<<<< HEAD
     /** Menghapus data yang ada didalam database
+=======
+    /**
+     * Delete data dalam database
+>>>>>>> 76f322f0341c19f332208a36863e0b316fb7fef9
      */
     fun deleteById(id: String): Int {
         return database.delete(DATABASE_TABLE, "$_ID = '$id'", null)

@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns
 import com.tsm.catatantsm.db.DatabaseContract.NoteColumns.Companion.TABLE_NAME
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76f322f0341c19f332208a36863e0b316fb7fef9
 internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
